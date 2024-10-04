@@ -192,7 +192,7 @@ export default function Home() {
             <div className="min-w-779px mx-auto text-center mt-32 relative z-10">
               <a href='https://screenshotfast.lemonsqueezy.com/buy/cb3682ac-2b38-4847-8fa6-3753bedcff93' className=" flex items-center bg-white rounded-full justify-center max-w-fit mx-auto space-x-3 border custom-border-color custom-box-shadow px-2 py-1.5">
                 <div className="bg-gradient text-white text-[11px] py-1 px-3 rounded-full">
-                  <p>✨ Pre-launch Offer</p> 
+                  <p>Pre-launch Offer</p> 
                 </div>
                 <div>
                   <p className=" text-[13px]">Limited time offers 15% discount using "<strong>EARLY15</strong>" coupon code</p>
