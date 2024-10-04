@@ -15,7 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 import crypto from 'crypto-js';
@@ -33,8 +33,13 @@ export default function Home() {
   const [status, setStatus] = useState(false)
   const [email, setEmail] = useState('')
   const [screenshots, setScreenshots] = useState([])
+  const [isClient, setIsClient] = useState(false);
 
   const secret = process.env.NEXT_PUBLIC_SIGNATURE_SECRET;
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const generateSignature = (data, timestamp, nonce) => {
     const payload = JSON.stringify({ ...data, timestamp, nonce });
@@ -190,15 +195,17 @@ export default function Home() {
               </div>
             </div>
             <div className="min-w-779px mx-auto text-center mt-32 relative z-10">
-              <Link href='https://screenshotfast.lemonsqueezy.com/buy/cb3682ac-2b38-4847-8fa6-3753bedcff93' className=" flex items-center bg-white rounded-full justify-center max-w-fit mx-auto space-x-3 border custom-border-color custom-box-shadow px-2 py-1.5">
-                <div className="bg-gradient text-white text-[11px] py-1 px-3 rounded-full">
-                  <span>✨ Pre-launch Offer</span>
-                </div>
-                <div>
-                  <span className=" text-[13px]">Limited time offers 15% discount using "<strong>EARLY15</strong>" coupon code</span>
-                </div>
-                <div><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 50 50" className="mx-auto"><path fill="currentColor" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" /><path fill="currentColor" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" /><path fill="currentColor" d="M16 24h17v2H16z" /></svg></div>
-              </Link>
+              {isClient && (
+                <Link href='https://screenshotfast.lemonsqueezy.com/buy/cb3682ac-2b38-4847-8fa6-3753bedcff93' className="flex items-center bg-white rounded-full justify-center max-w-fit mx-auto space-x-3 border custom-border-color custom-box-shadow px-2 py-1.5">
+                  <div className="bg-gradient text-white text-[11px] py-1 px-3 rounded-full">
+                    <span>✨ Pre-launch Offer</span>
+                  </div>
+                  <div>
+                    <span className=" text-[13px]">Limited time offers 15% discount using "<strong>EARLY15</strong>" coupon code</span>
+                  </div>
+                  <div><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 50 50" className="mx-auto"><path fill="currentColor" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" /><path fill="currentColor" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" /><path fill="currentColor" d="M16 24h17v2H16z" /></svg></div>
+                </Link>
+              )}
               <h1 className=" mt-10 text-[64px] font-semibold leading-tight">The Fastest Screenshot API for Developers</h1>
               <span className=" text-[#676666] text-base lead mt-[19px]">Quickly capture and deliver clear screenshots with our super-fast API. ScreenshotFast.com is made for developers, offering easy setup and powerful tools to help you automate.</span>
               <div className=" relative w-[524px] max-w-full mx-auto mt-7">
