@@ -28,7 +28,12 @@ ScreenshotFast is a high-performance, web-based screenshot capture tool built wi
    cd ScreenshotFast
    ```
 
-3. Install the dependencies:
+3. Copy the example environment file:
+   ```
+   cp .env.example .env
+   ```
+
+4. Install the dependencies:
    ```
    npm install
    ```
