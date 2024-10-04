@@ -183,9 +183,9 @@ export default function Home() {
                   <Link href={'/'}>
                     <Image src={'/assets/img/logo1.png'} alt="screenshotfast" width={155} height={35} />
                   </Link>
-                  <a href='https://screenshotfast.lemonsqueezy.com/buy/cb3682ac-2b38-4847-8fa6-3753bedcff93' target="__blank" className="flex items-center bg-black text-white px-5 py-2 text-base rounded-md">
+                  <Link href='https://screenshotfast.lemonsqueezy.com/buy/cb3682ac-2b38-4847-8fa6-3753bedcff93' target="__blank" className="flex items-center bg-black text-white px-5 py-2 text-base rounded-md">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 256 256" className=" mr-2"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"><path d="M 80.039519,211.06969 64.056987,239.90745" /><path d="m 175.96058,211.06969 15.98254,28.83776" /><circle cx="128" cy="128.007" r="95.915" /><path d="M 35.294352,102.43866 A 47.957299,47.957299 0 0 1 17.212686,53.792007 47.957299,47.957299 0 0 1 53.990946,17.175027 47.957299,47.957299 0 0 1 102.55767,35.470309" /><path d="m 127.99967,32.092482 3.8e-4,-15.985761" /><path d="M 128.00005,80.049788 V 128.00708" /><path d="m 128.00005,128.00708 33.91093,33.91093" /><path d="M 220.70575,102.43866 A 47.957299,47.957299 0 0 0 238.78742,53.792007 47.957299,47.957299 0 0 0 202.00916,17.175027 47.957299,47.957299 0 0 0 153.44244,35.470309" /></g></svg> <span>Join Waitlist</span> 
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function Home() {
                 <div><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 50 50" className="mx-auto"><path fill="currentColor" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" /><path fill="currentColor" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" /><path fill="currentColor" d="M16 24h17v2H16z" /></svg></div>
               </Link>
               <h1 className=" mt-10 text-[64px] font-semibold leading-tight">The Fastest Screenshot API for Developers</h1>
-              <p className=" text-[#676666] text-base lead mt-[19px]">Quickly capture and deliver clear screenshots with our super-fast API. ScreenshotFast.com is made for developers, offering easy setup and powerful tools to help you automate.</p>
+              <span className=" text-[#676666] text-base lead mt-[19px]">Quickly capture and deliver clear screenshots with our super-fast API. ScreenshotFast.com is made for developers, offering easy setup and powerful tools to help you automate.</span>
               <div className=" relative w-[524px] max-w-full mx-auto mt-7">
                 <form onSubmit={handleEmailSubmit}>
                   <input onChange={(e) => setEmail(e.target.value)} type="text" className="w-full px-[22px] placeholder:text-[13px] placeholder:text-[#E4E4E4]  py-[14px] bg-white h-11 rounded-full" placeholder="Enter Your Email Address" />
@@ -332,7 +332,8 @@ export default function Home() {
 
         <footer className="bg-white rounded-lg shadow container mx-auto dark:bg-gray-800">
           <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-            <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://screenshotfast.com" className="hover:underline">ScreenshotFast</a>. All Rights Reserved.
+            <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024
+              <Link href="https://screenshotfast.com" className="hover:underline">ScreenshotFast</Link>. All Rights Reserved.
             </span>
             <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
               <li>
