@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    experimental: {
+        missingSuspenseWithCSRBailout: false,
+    },
+    images: {
+        domains: ['screenshotfast.lemonsqueezy.com'],
+    },
+};
 
 export default nextConfig;
