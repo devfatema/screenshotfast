@@ -49,14 +49,6 @@ ScreenshotFast is a high-performance, web-based screenshot capture tool built wi
 
 3. Use the interface to capture screenshots or integrate the API into your application.
 
-## Configuration
-
-Edit the `.env.local` file to customize:
-
-- API endpoints
-- Output settings
-- Default capture options
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
