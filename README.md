@@ -57,10 +57,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
 
-## Acknowledgements
-
-- [Next.js](https://nextjs.org/) for the React framework
-
 ## Contact
 
 For support or queries, please open an issue on the GitHub repository.
